@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>How Animation Affects UX</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <nav id="nav" class="primary-nav scroll-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <div id="main" class="container-fluid">
+    <div class="col-md-4 work-single-text">
+      <a href="work.html" class="return-link">Back to all Work</a>
+      <h1 class="title">How Animation Affects UX</h1>
+      <span class="subtitle">Major Research Project</span>
+      <article class="work-text">
+        <section>
+          <h2>Intoduction // Justification</h2>
+          <p>The aim of this project was to explore how using animated transitions between states of a website interface would affect user experience. This relationship was expected to be moderated by how much cognitive load or mental effort the animation caused for the user. The idea was that animation might be helpful, but if it’s too complex or elaborate, it might increase the amount of mental effort needed to use the website, harming the user experience. Measuring the effects of animation this way also allowed for an examination of the relationship between cognitive load and user experience.</p>
+        </section>
+        <section>
+          <h2>Project Description</h2>
+          <p>User Experience (UX) is a field that is growing and gaining popularity as more and more digital products are released. UX teams will often test a specific component of a user interface (UI) with users to examine how changing it affects their perceived quality of UX. Cognitive Load Theory suggests that if a user’s cognitive resources are exceeded by an interface then understanding and learning will be impeded. This would suggest that keeping user’s cognitive load to minimum is important to UX. As web technologies improve, more animation is being used in UI design, but there is not a lot of research into how it affects UX. A simple image-gallery UI was developed with HTML, CSS and JavaScript for this project that allowed for maximum customisation in testing. Users clicked on the images to open them in an expanded view and this transition was animated in different ways. Users clicked on all of the images with buildings in them, similar to a CAPTCHA task, then completed two questionnaires measuring cognitive load experienced in the task and their perceived quality of UX. </p>
+        </section>
+        <section>
+          <h2>Project Findings</h2>
+          <p>This project did not find any statistically significant differences between animated and non-animated interfaces on their quality of UX or any significant interaction between animated transition and cognitive load on UX. This was likely due to a relatively small sample size of 77 participants and an issue with the complexity of the task the users had to do. This study is the first to look at cognitive load in the context of such a specific UI context. Including cognitive load in the context of UX could be valuable and provide insight into the relationship between a user’s working memory and perceived quality of user experience.</p>
+        </section>
+        <section>
+          <h2>Download Full Thesis</h2>
+          <p><a href="downloads\Rob McLoughlin How Animation Affects UX.pdf" class="download" download>You can download the a pdf of the full research project here</a></p>
+        </section>
+      </article>
+
+      <a class="totop" href="#main">Beam me up</a>
+      <img class="signature" src="img/signature-red.png" alt="signature">
+      <div class="icons-bar">
+        <a href="https://www.linkedin.com/in/robmcloughlin-ux/" target="_blank"></a>
+        <a href="https://twitter.com/RobMcLoughlin2" target="_blank"></a>
+        <a href="https://www.instagram.com/rob_mcloughlin/" target="_blank"></a>
+        <a href="https://github.com/Rob-McLoughlin" target="_blank"></a>
+        <a href="https://codepen.io/RobMcLoughlin/" target="_blank"></a>
+      </div>
+    </div>
+    <div class="col-md-8 work-imgs" id="gallery-container">
+      <img class="active-work-img" src="img/projects/thesis/1.jpg" alt="picture of finished report on project">
+      <img src="img/projects/thesis/2.gif" alt="Image of animation types, credit to /u/Jrcanest on reddit">
+      <img src="img/projects/thesis/3.jpg" alt="mockup of someone completing the experiment">
+      <img src="img/projects/thesis/4.jpg" alt="two hard copies of the report">
+      <ul id="pager">
+      </ul>
+    </div>
+  </div>
+  <script src="js/portfolio-dist.js"></script>
+  <script src="js/work-single-dist.js"></script>
+</body>
+
+</html>

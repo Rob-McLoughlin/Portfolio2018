@@ -1,1 +1,1 @@
-var setSquare=function(e){var t=e.offsetWidth;e.style.height=t+"px"},homeSquare=document.getElementById("home-card");setSquare(homeSquare);
+var setSquare=function(e){var t=e.offsetWidth;e.style.height=t+"px"};if(1440<=window.innerWidth||window.innerWidth<1024){var homeSquare=document.getElementById("home-card");setSquare(homeSquare),console.log(12)}

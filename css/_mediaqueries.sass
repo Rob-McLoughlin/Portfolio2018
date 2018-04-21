@@ -8,6 +8,8 @@ $breakLaptop: 1580px
 @media screen and (max-width: $breakLaptop)
   div.card
     padding: 48px
+    a.button
+      width: 160px
 @media screen and (max-width: $break1280)
   // Home Stuff
   div.home-card
@@ -28,6 +30,9 @@ $breakLaptop: 1580px
   div.work-imgs
     //
 @media screen and (max-width: $breakTabletLg)
+  // Home Stuff
+  div.home-card
+    height: 500px
   // Work Stuff
   div.work-container
     div.work-thumbnails
@@ -63,6 +68,9 @@ $breakLaptop: 1580px
   div.card.home-card
     margin: 48px
     height: inherit
+    max-height: 500px
+    a.button
+      width: 102px
   img.home-background-img
     height: 100%
     width: auto
@@ -123,6 +131,7 @@ $breakLaptop: 1580px
   // Home Stuff
   div.card.home-card
     margin: 0px 6px
+    min-height: 375px
 
   // Work Stuff
   div.work-container div.work-thumbnails ul li
