@@ -4,8 +4,9 @@ var setSquare = function(e) {
 }
 const homeSquare = document.getElementById('home-card');
 
-if (window.location.pathname.includes('/index.html')) || window.location.pathname.includes('/')) {
+if (window.location.pathname.includes('/index.html') || window.location.pathname.includes('/')) {
   setSquare(homeSquare);
+  console.log("tweet tweet")
 }
 
 var hoverBanner = function(i) {
