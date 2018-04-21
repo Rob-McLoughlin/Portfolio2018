@@ -1,0 +1,509 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600')
+// Import partials
+@import 'animations'
+// Variables
+$red: #ed2024
+$white: #fff
+$black: #000
+$cardShadow: 0px 0px 95px 0px rgba(0,0,0,0.1)
+$transition: 0.2s ease-out
+$cubic1: cubic-bezier(.56,.58,.42,1.37)
+$caseStudyHighlight: url("../img/projects/highlight.jpg")
+
+$homeCardSize: 45vh
+$cardPaddingLg: 120px
+$cardPaddingMd: 48px
+body
+  margin: 0px
+  padding: 0px
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif
+  color: $black
+
+// Typography
+.red-text
+  color: $red
+p
+  font-size: 16px
+  line-height: 24px
+  margin-bottom: 12px
+  a
+    color: $red !important
+    &:hover
+      border-bottom: 2px solid $red
+h1
+  font-size: 48px
+  font-weight: 600
+  margin: 0px
+h1.title
+  color: $red
+  line-height: 120px
+  // margin-bottom: 56px
+h2
+  font-size: 36px
+  font-weight: 600
+  margin: 0px
+
+*::selection
+  background: $red
+  color: $white
+
+*::-moz-selection
+  background: $red
+  color: $white
+
+
+// Reset Standard CSS
+a, a:hover, a:active, a:visited, a:focus
+  color: inherit
+  text-decoration: none !important
+div.container-fluid
+  padding-left: 0px
+  padding-right: 0px
+
+
+// Reusable Elements
+nav.primary-nav
+  position: fixed
+  right: 72px
+  top: 48px
+  z-index: 9
+  transition: all 0.8s ease
+  ul
+    list-style: none
+    li
+      display: inline
+      margin-left: 24px
+      font-size: 18px
+      text-transform: uppercase
+      color: $red
+      font-weight: 600
+    li.active, li:hover
+      border-bottom: 3px solid $red
+
+nav.light-nav
+  transition: all 0.8s ease
+  ul
+    li
+      color: $white
+    li.active, li:hover
+      border-bottom: 3px solid $white
+
+div.card
+  position: relative
+  background: $white
+  box-shadow: $cardShadow
+  padding: $cardPaddingLg
+  &::after
+    // content: ''
+    position: absolute
+    top: 0px
+    right: 0px
+    height: $cardPaddingMd
+    width: $cardPaddingMd
+    background: $red
+
+a.button
+  position: relative
+  display: block
+  text-align: center
+  border: 4px solid $red
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 18px
+  color: $red
+  padding: 6px 0px
+  width: 180px
+  transition: $transition
+  box-sizing: border-box
+  &:hover
+    background: $red
+    color: $white
+
+div.icons-bar
+  $iconSize: 32px
+  display: flex
+  justify-content: space-between
+  width: 60%
+  // margin-left: 20%
+  height: $iconSize
+  a
+    height: $iconSize
+    width: $iconSize
+    background-size: contain
+    transition: $transition
+    opacity: 0
+    // transform: translateY(-10px)
+    animation: dropIn 0.2s ease forwards
+    animation-delay: 0.2s
+    &:hover
+      transform: translateY(-3px)
+      opacity: 0.6
+    &:nth-of-type(1)
+      background-image: url("../img/icons/linkedin.png")
+    &:nth-of-type(2)
+      background-image: url("../img/icons/twitter.png")
+      animation-delay: 0.3s
+    &:nth-of-type(3)
+      background-image: url("../img/icons/instagram.png")
+      animation-delay: 0.4s
+    &:nth-of-type(4)
+      background-image: url("../img/icons/github.png")
+      animation-delay: 0.5s
+    &:nth-of-type(5)
+      background-image: url("../img/icons/codepen.png")
+      animation-delay: 0.6s
+
+a.return-link
+  line-height: 24px
+  color: $red
+
+// Home Page
+div.home-container
+  height: 100vh
+  width: 100%
+  display: flex
+  align-items: center
+  overflow: hidden
+  position: relative
+div.home-card
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  opacity: 0
+  transform: translateY(-10px)
+  animation: dropIn 0.8s forwards $cubic1
+  h1
+    align-self: flex-start
+  div.buttons
+    a
+      margin: 0px 6px
+      float: left
+  div.icons-bar
+    align-self: flex-end
+img.home-background-img
+  position: absolute
+  z-index: 0
+  bottom: 0px
+  left: 0px
+  top: 0px
+  // min-height: 100%
+  width: 100%
+  height: auto
+  opacity: 0
+  animation: fadeInCase 0.8s ease forwards 0.8s
+video.home-background-video
+  position: absolute
+  z-index: 0
+  top: 0px
+  left: 0px
+  height: 100vh
+  width: 100vw
+
+// Work
+nav.primary-nav.scroll-nav
+  // Moves nav to position as if there were no scroll bar
+  right: 55px
+div.work-fluid
+  padding: 0px
+div.case-study-highlight
+  height: 100vh
+  background: gray
+  background: $caseStudyHighlight
+  background-position: 50%
+  background-size: cover
+  display: flex
+  padding: 48px
+  opacity: 0
+  animation: fadeInCase 0.8s linear forwards
+  animation-delay: 0.8s
+  position: fixed
+  left: 0px
+  &::after
+    content: ''
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    position: absolute
+    bottom: 0px
+    left: 0px
+    height: 100%
+    width: 100%
+    z-index: 0
+  a
+    font-size: 36px
+    font-weight: 600
+    margin: 0px
+    opacity: 0
+    color: $white
+    align-self: flex-end
+    text-transform: capitalize
+    z-index: 1
+    animation: fadeInCase 0.8s linear forwards
+    animation-delay: 1.2s
+    transition: $transition
+    &:hover
+      color: $red
+
+    &::before
+      content: 'highlight'
+      font-size: 18px
+      display: block
+      text-transform: uppercase
+      color: rgba($white, 0.5)
+    span
+      font-weight: 400
+
+div.work-container
+  padding: 72px 120px
+  height: 100vh
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: left
+  // This is to accomodate the fixed banner at the side
+  margin-left: 25%
+  div.work-thumbnails
+    ul
+      list-style: none
+      li
+        // Pre animation
+        transform: translateY(-12px)
+        opacity: 0
+        display: block
+        position: relative
+        width: 21%
+        height: auto
+        min-height: 300px
+        overflow: hidden
+        float: left
+        margin-left: 36px
+        margin-bottom: 12px
+        // animation: dropIn 0.8s forwards cubic-bezier(.5,.46,.37,1.21)
+        animation: dropIn 0.8s forwards $cubic1
+        // Removes margin of left-most container
+        &:first-of-type, &:nth-of-type(5), &:nth-of-type(9)
+          margin-left: 0px
+        img
+          // margin-left: -20%
+          display: block
+          height: auto
+          width: 100%
+          filter: grayscale(100%)
+          transition: all $transition
+          margin-bottom: 12px
+        a
+          color: $black
+          font-weight: 600
+          font-size: 16px
+          text-transform: capitalize
+          line-height: 1.2
+          transition: all $transition
+          span.date
+            display: block
+            font-weight: 400
+            margin-top: 6px
+        &:hover
+          img
+            filter: grayscale(0%)
+          a
+            color: $red
+        // Stutter the starts of animations
+        &:nth-of-type(2)
+          animation-delay: 0.2s
+        &:nth-of-type(3)
+          animation-delay: 0.4s
+        &:nth-of-type(4)
+          animation-delay: 0.6s
+
+// About Page stuff. About = abt
+div.abt-text
+  padding: 72px 48px
+  height: 100vh
+  display: flex
+  flex-wrap: wrap
+  align-content: center
+  a.return-link
+    width: 100%
+    &:hover
+      text-decoration: underline
+  h1
+    margin-top: auto
+    align-self: flex-start
+  p
+    opacity: 0
+    transform: translateY(-10px)
+    animation: dropIn 0.8s ease forwards
+    display: block
+    align-self: flex-start
+  p:nth-of-type(2)
+    animation-delay: 0.2s
+  p:nth-of-type(3)
+    animation-delay: 0.4s
+  div.icons-bar
+    margin-left: 20%
+    margin-top: 48px
+    align-self: flex-end
+div.abt-img
+  position: relative
+  height: 100vh
+  overflow: hidden
+  img
+    position: absolute
+    left: 0%
+    top: 0%
+    height: auto
+    width: 100%
+    filter: grayscale(100%)
+    opacity: 0
+    animation: fadeInCase 0.8s ease forwards
+    animation-delay: 0.6s
+
+// Work Single
+div.work-single-text
+  padding: 96px 48px
+  position: relative
+  height: auto
+  z-index: 1
+  background: $white
+  h1, h2, .subtitle
+  opacity: 0
+  animation: dropDown 0.8s $cubic1 forwards
+  h1
+    line-height: 1.3
+    margin-bottom: 24px
+  .subtitle
+    margin-top: -36px
+    font-size: 18px
+    text-transform: capitalize
+    opacity: 0
+    animation: dropDown 0.8s $cubic1 forwards
+    animation-delay: 0.6s
+  a
+    color: $red
+  a:hover
+    border-bottom: 2px solid $red
+  h2
+    font-size: 24px
+    color: $red
+    margin: 24px 0px 12px 0px
+  section:last-of-type
+    padding-bottom: 10vh
+  a.totop
+    // width: 100%
+    display: block
+    text-align: center
+    transition: 0.2s ease
+    &:before, &:after
+      content: ' ^ '
+    &:hover
+      border: none
+      transform: translateY(-3px)
+  img.signature
+    width: 50%
+    margin: 72px 0px
+    margin-left: 25%
+    height: auto
+    display: block
+  div.icons-bar
+    margin-left: 20%
+    a:hover
+      border: none
+
+div.work-imgs
+  position: fixed
+  padding: 0px
+  right: 0px
+  z-index: 2
+  height: 100vh
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: 0.8s ease
+  &:before
+    content: ''
+    position: fixed
+    top: 0px
+    left: 0px
+    height: 100vh
+    width: 100vw
+    background: rgba($black, 0.9)
+    z-index: 0
+    opacity: 0
+    transition: 0.8s ease 0.2s
+    pointer-events: none
+  &::after
+    content: ''
+    position: absolute
+    left: 0%
+    top: 50%
+    height: 0px
+    width: 0px
+    border-top: 24px solid transparent
+    border-bottom: 24px solid transparent
+    border-left: 24px solid $white
+    margin-top: -12px
+    z-index: 8
+    transition: all 0.8s ease
+    // transition-delay: 1s
+    // animation: flashRed 0.6s ease
+  img
+    display: none
+    height: auto
+    width: auto
+    max-width: 100%
+    min-height: 50%
+    max-height: 150%
+    transition: max-height 1s ease
+    // transition: all 0.8s ease
+
+  img.active-work-img
+    display: block
+  &.fullscreen
+    position: fixed
+    right: 0px
+    width: 100vw
+    overflow: hidden
+    &::after
+      left: 24px
+      // display: none
+    &:before
+      pointer-events: auto
+      opacity: 1
+    img
+      max-height: 90%
+      width: auto
+      // padding: 72px 0px
+      z-index: 1
+
+  ul#pager
+    position: fixed
+    right: 55px
+    height: 100%
+    width: 24px
+    display: flex
+    flex-wrap: wrap
+    align-content: center
+    li
+      background: $white
+      box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.2)
+      height: 18px
+      width: 18px
+      margin: 18px 0px
+      border-radius: 50%
+      // border: 1px solid $red
+      opacity: 0
+      transition: $transition
+      animation: fadeInCase 0.6s ease forwards 0.8s
+    li.active
+      background: $red
+      transform: scale(1.1,1.1)
+
+// Page Transition Out Class
+.page-transition-out
+  // animation-direction: reverse
+  opacity: 0
+  transition: 0.4s ease
+
+// Media Queries
+@import 'mediaqueries'

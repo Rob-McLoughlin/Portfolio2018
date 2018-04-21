@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sorcha O'Raw Embroidery Portfolio - Rob McLoughlin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+  <nav id="nav" class="primary-nav scroll-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <div id="main" class="container-fluid">
+    <div class="col-md-4 work-single-text">
+      <a href="work.html" class="return-link">Back to all Work</a>
+      <h1 class="title">Sorcha O’Raw Portfolio</h1>
+      <span class="subtitle"><a href="http://www.sorchaoraw.com/" target="_blank">Link to live site</a></span>
+      <article class="work-text">
+        <section>
+          <h2>Intoduction // Justification</h2>
+          <p>Sorcha O’Raw is an embroidery and textiles artist from Dublin, Ireland. Her work focuses on wearable items that often take a miniature scale. Sorcha had an existing portfolio site but it no longer met her needs as her work became more varied
+            and numerous. It also fell victim to some usability issues on mobile. The existing content was mostly visual, with images taking centre stage, with some text to accent or explain the project.</p>
+        </section>
+        <section>
+          <h2>Research</h2>
+          <p>Research into other portfolios in embroidery and other fashion designers showed a spectrum of extremely “out there” portfolios to very minimal, easy to use sites that served to stay out of the way of the work. It became clear that finding a
+            balance between the two was key. The experience has to memorable, while also not impeding the UX. <a target="_blank" href="http://www.rhagallery.ie/"></a>The RHA Gallery in Dublin is a wide open, spacious gallery that uses reserved colour
+            and subtle furnishing to allow the work to take centre stage, while contributing to a wider hedonic experience. These qualities made sense to me to bring to an online portfolio of work; it didn’t lean into any one genre or medium of work which
+            would allow for more flexibility as Sorcha’s work continued to vary. It also meant that the UI wouldn’t get in the way of UX for users just looking to find work. </p>
+        </section>
+        <section>
+          <h2>Low Fidelity</h2>
+          <p>After I had a rough concept of how to structure the content, I started sketching and doing wireframes on paper. I tried it a few different ways but developed a basic wireframe through Adobe XD. I discovered that time lapses of wireframe drawing
+            are HUGELY satisfying.</p>
+        </section>
+        <section>
+          <h2>High Fidelity</h2>
+          <p>High fidelity was done in a mix of Photoshop and XD. I’m enjoying XD, I find it does about 80% of what I want for high-fidelity mockups and is much faster than Photoshop to load/export/use. I still need Photoshop and it does always end up being
+            my main tool, especially for such an image-heavy site as this one. A simple high contrast (hardly original) colour scheme was used to make the colour of the projects stand out, again based on the RHA.
+          </p>
+        </section>
+        <section>
+          <h2>Development</h2>
+          <p>I developed the home page, work page and single project page using HTML, CSS and jQuery. I had ideas for subtle animated elements on the site to add some life and personality to the interface. Once the static pages were complete and in working orders, I moved the site over to WordPress to provide Sorcha with the tools to edit as much of the site as possible without having to enter any code. I found the Advanced Custom Fields plugin was fantastic for allowing customisation. Good UX is certainly important for the user, but it’s also important to consider the UX of the client! Image compression proved to be a challenge, as many of the images from the existing site had to be compressed so loading time wouldn’t be nightmarish. </p>
+        </section>
+        <section>
+          <h2>Conclusion</h2>
+          <p>Client was happy, designer was happy. The current site is an improvement from the last one in terms of usability and strength of brand and is easier to update moving forward.</p>
+        </section>
+      </article>
+
+      <a class="totop" href="#main">Beam me up</a>
+      <img class="signature" src="img/signature-red.png" alt="signature">
+      <div class="icons-bar">
+        <a href="https://www.linkedin.com/in/robmcloughlin-ux/" target="_blank"></a>
+        <a href="https://twitter.com/RobMcLoughlin2" target="_blank"></a>
+        <a href="https://www.instagram.com/rob_mcloughlin/" target="_blank"></a>
+        <a href="https://github.com/Rob-McLoughlin" target="_blank"></a>
+        <a href="https://codepen.io/RobMcLoughlin/" target="_blank"></a>
+      </div>
+    </div>
+    <div class="col-md-8 work-imgs" id="gallery-container">
+      <img class="active-work-img" src="img/projects/sorcha/1.jpg" alt="overview image featuring the poster, manifesto and social media">
+      <img src="img/projects/sorcha/2.jpg" alt="Early notebook concepts">
+      <img src="img/projects/sorcha/timelapse2.gif" alt="timelapse of wireframing">
+      <img src="img/projects/sorcha/3.jpg" alt="High fidelity mockups">
+      <img src="img/projects/sorcha/4.png" alt="Image of the website back end">
+      <img src="img/projects/sorcha/5.jpg" alt="Final site onscreen">
+      <ul id="pager">
+      </ul>
+    </div>
+  </div>
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>
