@@ -1,0 +1,1 @@
+var hoverBanner=function(n){var e=n.children[0].src,t=document.getElementById("work-highlight");t.style.backgroundImage="url("+e+")";var i=t.children[0],r=n.children[1].textContent;i.textContent=r},delayAnimationWorkGrid=function(){var n=document.getElementsByClassName("thumbnail-container");for(i=1;i<n.length;i++)n[i].style.animationDelay=i/10+"s"};delayAnimationWorkGrid();

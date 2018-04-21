@@ -1,0 +1,1 @@
+var setSquare=function(e){var t=e.offsetWidth;e.style.height=t+"px"},homeSquare=document.getElementById("home-card");setSquare(homeSquare);
