@@ -4,7 +4,7 @@ var setSquare = function(e) {
 }
 const homeSquare = document.getElementById('home-card');
 
-if (window.location.pathname === '/index.html' || window.location.pathname == '/') {
+if (window.location.pathname.includes('/index.html')) || window.location.pathname.includes('/')) {
   setSquare(homeSquare);
 }
 
@@ -29,7 +29,7 @@ var delayAnimationWorkGrid = function() {
   }
 }
 
-if (window.location.pathname === '/work.html') {
+if (window.location.pathname.includes('/work.html')) {
   delayAnimationWorkGrid();
 }
 
@@ -148,8 +148,6 @@ var mobileNav = function(el) {
 }
 
 if (window.innerWidth < 468) {
-
   var navigation = document.getElementById('nav');
-  console.log(navigation)
   mobileNav(navigation)
 };
