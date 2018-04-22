@@ -25,3 +25,14 @@ if (window.innerWidth < 468) {
   var navigation = document.getElementById('nav');
   mobileNav(navigation)
 };
+
+
+// Fix image case sensitivity
+var images = document.getElementsByTagName('img')
+
+for (i = 0; i < images.length; i++){
+  var thisSrc = images[i].src;
+  var lwrCaseSrc = thisSrc.toLowerCase();
+  console.log(lwrCaseSrc)
+  images[i].src = lwrCaseSrc;
+}
