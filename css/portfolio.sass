@@ -255,6 +255,7 @@ div.case-study-highlight
 
 div.work-container
   padding: 72px 120px
+  padding-top: 0px
   height: 100vh
   display: flex
   flex-wrap: wrap
@@ -314,6 +315,39 @@ div.work-container
           animation-delay: 0.4s
         &:nth-of-type(4)
           animation-delay: 0.6s
+
+  // Custom classes to add type of work to containers
+  li.thumbnail-container
+    &::after
+      position: absolute
+      width: 100%
+      text-align: center
+      top: 0%
+      left: 0px
+      font-size: 18px
+      color: $white
+      font-weight: 600
+      background: rgba($red, 0.8)
+      padding: 12px 0px
+      pointer-events: none
+      opacity: 0
+      transition: 0.4s ease 0s
+    &.work-research
+      &::after
+        content: "Research"
+    &.work-graphic
+      &::after
+        content: "Graphic Design"
+    &.work-design
+      &::after
+        content: "UI Design"
+    &.work-dandd
+      &::after
+        content: "Design & Development"
+  li.thumbnail-container:hover
+    &::after
+      opacity: 1
+
 
 // About Page stuff. About = abt
 div.abt-text
@@ -386,6 +420,11 @@ div.work-single-text
     font-size: 24px
     color: $red
     margin: 24px 0px 12px 0px
+  section
+    opacity: 0
+    animation: dropIn 0.6s ease forwards
+    animation-delay: 0.1s
+
   section:last-of-type
     padding-bottom: 10vh
   a.totop
@@ -408,7 +447,15 @@ div.work-single-text
     margin-left: 20%
     a:hover
       border: none
-
+  ol
+    font-size: 16px
+    list-style-type: decimal-leading-zero
+    list-style-position: inside
+    color: $red
+    li
+      margin-bottom: 12px
+      span
+        color: $black
 div.work-imgs
   position: fixed
   padding: 0px

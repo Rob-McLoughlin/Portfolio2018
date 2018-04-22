@@ -367,6 +367,7 @@ div.case-study-highlight {
 
 div.work-container {
   padding: 72px 120px;
+  padding-top: 0px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,6 +438,32 @@ div.work-container {
       div.work-container div.work-thumbnails ul li:nth-of-type(4) {
         -webkit-animation-delay: 0.6s;
         animation-delay: 0.6s; }
+  div.work-container li.thumbnail-container::after {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0%;
+    left: 0px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    background: rgba(237, 32, 36, 0.8);
+    padding: 12px 0px;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: 0.4s ease 0s;
+    -o-transition: 0.4s ease 0s;
+    transition: 0.4s ease 0s; }
+  div.work-container li.thumbnail-container.work-research::after {
+    content: "Research"; }
+  div.work-container li.thumbnail-container.work-graphic::after {
+    content: "Graphic Design"; }
+  div.work-container li.thumbnail-container.work-design::after {
+    content: "UI Design"; }
+  div.work-container li.thumbnail-container.work-dandd::after {
+    content: "Design & Development"; }
+  div.work-container li.thumbnail-container:hover::after {
+    opacity: 1; }
 
 div.abt-text {
   padding: 72px 48px;
@@ -525,6 +552,12 @@ div.work-single-text {
     font-size: 24px;
     color: #ed2024;
     margin: 24px 0px 12px 0px; }
+  div.work-single-text section {
+    opacity: 0;
+    -webkit-animation: dropIn 0.6s ease forwards;
+    animation: dropIn 0.6s ease forwards;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s; }
   div.work-single-text section:last-of-type {
     padding-bottom: 10vh; }
   div.work-single-text a.totop {
@@ -550,6 +583,15 @@ div.work-single-text {
     margin-left: 20%; }
     div.work-single-text div.icons-bar a:hover {
       border: none; }
+  div.work-single-text ol {
+    font-size: 16px;
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+    color: #ed2024; }
+    div.work-single-text ol li {
+      margin-bottom: 12px; }
+      div.work-single-text ol li span {
+        color: #000; }
 
 div.work-imgs {
   position: fixed;

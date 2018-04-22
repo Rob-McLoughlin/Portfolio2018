@@ -62,6 +62,16 @@ if (window.innerWidth > 769) {
   checkSection();
 };
 
+// Fade in text in order
+var fadeInText = function(){
+  var sections = document.querySelectorAll('.work-text section')
+  for (i = 0; i < sections.length; i++) {
+    sections[i].style.animationDelay = "0." + i*2 + "s";
+  }
+}
+fadeInText();
+
+
 // Full Screen Images
 var galleryContainer = document.getElementById('gallery-container')
 var fullscreen = function(){
